@@ -1,6 +1,6 @@
 FROM fedora:rawhide
 MAINTAINER Peter Borsa <peter.borsa@integralvision.hu>
-LABEL Description="A Docker image to build various Drupal sites" Vendor="Integral Vision"
+LABEL Description="A Docker image to build various Drupal sites" Vendor="asrob"
 
 RUN echo "deltarpm=False" >> /etc/dnf/dnf.conf \
   && dnf clean all \
