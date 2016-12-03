@@ -14,4 +14,5 @@ RUN echo "deltarpm=False" >> /etc/dnf/dnf.conf \
   && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php.ini \
   && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php.ini \
-  && dnf remove -y gcc rpm-build ruby-devel rubygems-devel
+  && dnf remove -y gcc rpm-build ruby-devel rubygems-devel \
+  && dnf install -y bzip2 file findutils patch tar xz
