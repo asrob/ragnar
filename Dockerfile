@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:rawhide
 MAINTAINER Peter Borsa <peter.borsa@gmail.com>
 LABEL Description="A basic Docker image to build various Drupal sites" Vendor="asrob"
 
