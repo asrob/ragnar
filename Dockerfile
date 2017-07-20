@@ -6,8 +6,10 @@ RUN apk --update add \
   curl \
   git \
   nodejs \
+  nodejs-npm \
   php7 \
   php7-bcmath \
+  php7-bz2 \
   php7-curl \
   php7-gd \
   php7-iconv \
@@ -17,8 +19,10 @@ RUN apk --update add \
   php7-mcrypt \
   php7-opcache \
   php7-openssl \
+  php7-pear \
   php7-phar \
   php7-xml \
+  php7-zlib \
   python3 \
   sed \
   tar \
@@ -27,13 +31,11 @@ RUN apk --update add \
   which \
   xz \
   zip \
-  && rm /var/cache/apk/*
-
-RUN npm install -g grunt-cli gulp-cli \
-  && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php.ini \
-  && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php.ini \
-  && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php.ini \
-  && ln -s /usr/bin/php7 /usr/bin/php \
+  && rm /var/cache/apk/* \
+  && npm install -g grunt-cli gulp-cli \
+  && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php7/php.ini \
+  && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php7/php.ini \
+  && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
   && curl -o /usr/bin/drush https://github.com/drush-ops/drush/releases/download/8.1.12/drush.phar \
   && chmod +x /usr/bin/drush 
