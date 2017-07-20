@@ -27,7 +27,9 @@ RUN apk --update add \
   which \
   xz \
   zip \
-  && npm install -g grunt-cli gulp-cli \
+  && rm /var/cache/apk/*
+
+RUN npm install -g grunt-cli gulp-cli \
   && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php.ini \
   && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php.ini \
