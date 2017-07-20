@@ -7,6 +7,7 @@ RUN apk --update add \
   git \
   nodejs \
   nodejs-npm \
+  openssh \
   php7 \
   php7-bcmath \
   php7-bz2 \
@@ -38,6 +39,7 @@ RUN apk --update add \
   php7-zip \
   php7-zlib \
   python3 \
+  rsync \
   sed \
   tar \
   unzip \
@@ -46,6 +48,7 @@ RUN apk --update add \
   xz \
   zip \
   && rm /var/cache/apk/* \
+  && ln -s /usr/bin/python3 /usr/bin/python \
   && npm install -g grunt-cli gulp-cli \
   && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php7/php.ini \
   && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php7/php.ini \
