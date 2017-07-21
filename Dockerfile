@@ -33,6 +33,7 @@ RUN apk --update add \
   php7-phar \
   php7-recode \
   php7-session \
+  php7-simplexml \
   php7-soap \
   php7-sockets \
   php7-xml \
