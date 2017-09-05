@@ -36,6 +36,7 @@ RUN apk --update add \
   php7-simplexml \
   php7-soap \
   php7-sockets \
+  php7-tokenizer \
   php7-xml \
   php7-zip \
   php7-zlib \
