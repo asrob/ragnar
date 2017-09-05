@@ -38,6 +38,7 @@ RUN apk --update add \
   php7-sockets \
   php7-tokenizer \
   php7-xml \
+  php7-xmlwriter \
   php7-zip \
   php7-zlib \
   python3 \
