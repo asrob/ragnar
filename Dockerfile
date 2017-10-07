@@ -57,5 +57,5 @@ RUN apk --update add \
   && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php7/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
-  && curl -L -o /usr/bin/drush https://github.com/drush-ops/drush/releases/download/8.1.12/drush.phar \
+  && curl -L -o /usr/bin/drush https://github.com/drush-ops/drush/releases/download/8.1.14/drush.phar \
   && chmod +x /usr/bin/drush 
