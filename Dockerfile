@@ -17,7 +17,6 @@ RUN apk --update --no-cache add \
   php7-curl \
   php7-dom \
   php7-exif \
-  php7-fileinfo \
   php7-gd \
   php7-gettext \
   php7-iconv \
@@ -33,14 +32,10 @@ RUN apk --update --no-cache add \
   php7-pdo_mysql \
   php7-pear \
   php7-phar \
-  php7-recode \
   php7-session \
-  php7-simplexml \
   php7-soap \
   php7-sockets \
-  php7-tokenizer \
   php7-xml \
-  php7-xmlwriter \
   php7-zip \
   php7-zlib \
   python3 \
