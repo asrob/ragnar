@@ -50,6 +50,7 @@ RUN apk --update --no-cache add \
   xz \
   zip \
   && ln -s /usr/bin/python3 /usr/bin/python \
+  && ln -s /usr/bin/php7 /usr/bin/php \
   && npm install -g grunt-cli gulp-cli \
   && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php7/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
