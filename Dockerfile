@@ -1,6 +1,6 @@
 FROM alpine:3.6
 MAINTAINER Peter Borsa <peter.borsa@gmail.com>
-LABEL Description="A Docker image to build various Drupal sites" Vendor="asrob"
+LABEL Description="A minimal Docker image to build various Drupal projects." Vendor="asrob"
 
 RUN apk --update --no-cache add \
   build-base \
@@ -53,10 +53,9 @@ RUN apk --update --no-cache add \
   && ln -s /usr/bin/php5 /usr/bin/php \
   && npm install -g grunt-cli gulp-cli \
   && sed -i "s|;*memory_limit =.*|memory_limit = 4G|i" /etc/php5/php.ini \
-  && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php5/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php5/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
-  && curl -L -o /usr/bin/drush https://github.com/drush-ops/drush/releases/download/8.1.14/drush.phar \
+  && curl -L -o /usr/bin/drush https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar \
   && chmod +x /usr/bin/drush \
   && gem install sass compass --no-ri --no-rdoc \
   && apk del build-base libffi-dev ruby-dev \
