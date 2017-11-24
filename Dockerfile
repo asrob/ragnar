@@ -55,8 +55,6 @@ RUN apk --update --no-cache add \
   && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php7/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
-  && curl -L -o /usr/bin/drush https://github.com/drush-ops/drush-launcher/releases/download/0.4.3/drush.phar \
-  && chmod +x /usr/bin/drush \
   && gem install sass compass --no-ri --no-rdoc \
   && apk del build-base libffi-dev ruby-dev \
   && rm -rf /var/cache/apk/*
