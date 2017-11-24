@@ -58,7 +58,6 @@ RUN apk --update --no-cache add \
   && ln -s /usr/bin/python3 /usr/bin/python \
   && npm install -g grunt-cli gulp-cli \
   && sed -i "s|;*memory_limit =.*|memory_limit = 2G|i" /etc/php7/php.ini \
-  && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php7/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
   && gem install sass compass --no-ri --no-rdoc \
