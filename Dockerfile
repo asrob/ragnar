@@ -61,7 +61,6 @@ RUN apk --update --no-cache add \
   && sed -i "s|;*max_execution_time =.*|max_execution_time = 300|i" /etc/php7/php.ini \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
-  && chmod +x /usr/bin/drush \
   && gem install sass compass --no-ri --no-rdoc \
   && apk del build-base libffi-dev ruby-dev \
   && rm -rf /var/cache/apk/*
