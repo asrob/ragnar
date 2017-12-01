@@ -7,7 +7,8 @@ RUN apk --update --no-cache add \
   curl \
   git \
   libffi-dev \
-  nodejs-current \
+  nodejs \
+  nodejs-npm \
   openssh \
   php7 \
   php7-bcmath \

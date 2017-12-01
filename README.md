@@ -8,7 +8,7 @@ A minimal Docker image to build various Drupal projects.
 
 * Alpine Linux EDGE
 * PHP 7.1.x
-* NodeJS 9.x
+* NodeJS 8.x
 * Composer
 * Grunt
 * Gulp
