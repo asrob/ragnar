@@ -13,4 +13,3 @@ A minimal Docker image to build various Drupal projects.
 * Composer
 * Grunt
 * Gulp
-* Drush launcher
