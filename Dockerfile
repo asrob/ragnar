@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 LABEL maintainer="Peter Borsa <peter.borsa@gmail.com>" 
 LABEL description="A minimal Docker image to build various Drupal projects."
 LABEL vendor="asrob"
