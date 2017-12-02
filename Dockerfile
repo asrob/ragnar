@@ -1,7 +1,7 @@
 FROM alpine:edge
-MAINTAINER Peter Borsa <peter.borsa@gmail.com>
-LABEL Description="A minimal Docker image to build various Drupal projects." Vendor="asrob"
-
+LABEL maintainer="Peter Borsa <peter.borsa@gmail.com>" 
+LABEL description="A minimal Docker image to build various Drupal projects."
+LABEL vendor="asrob"
 RUN apk --update --no-cache add \
   build-base \
   curl \
