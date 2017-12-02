@@ -10,6 +10,7 @@ RUN apk --update --no-cache add \
   nodejs \
   nodejs-npm \
   openssh \
+  patch \
   php5 \
   php5-bcmath \
   php5-bz2 \
