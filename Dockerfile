@@ -71,6 +71,7 @@ RUN apk update \
   && npm -g i npm \
   && npm install -g grunt-cli gulp-cli eslint sass-lint \
   && sed -i "s|;*date.timezone =.*|date.timezone = Europe\/Budapest|i" /etc/php7/php.ini \
+  && sed -i "s|;*memory_limit =.*|memory_limit = -1|i" /etc/php7/php.ini \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
   && gem install sass compass --no-ri --no-rdoc \
   && apk del build-base libffi-dev ruby-dev \
